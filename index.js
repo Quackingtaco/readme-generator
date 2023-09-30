@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const generateMarkdown = require("generateMarkdown");
+const generateMarkdown = require("./utilities/generateMarkdown");
 const fs = require('fs');
 
 // TODO: Create an array of questions for user input
@@ -77,13 +77,13 @@ const questions = [
     },
     {
         type: 'input',
-        message: "Provide and tests written or used for your project.",
+        message: "Provide any tests written or used for your project.",
         name: 'test',
     },
     {
         type: 'list',
         message: "Choose a license for your project.",
-        choices: ['Apache', 'Mozilla', 'MIT', 'GNU', 'Boost', 'ISC'],
+        choices: ['Apache', 'GNU', 'GPL v3', 'MIT', 'BSD 2-Clause', 'BSD 3-Clause', 'Boost', 'CreativeCommons 0', 'Eclipse', 'GNU AGPL', 'GNU GPL v2', 'GNU LGPL', 'Mozilla', 'Unlicense'],
         name: 'license',
     },
 
@@ -102,7 +102,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.createPromptModule(questions)
+    inquirer.prompt(questions)
     .then(function(answers) {
         const fileName = 
         answers.title
