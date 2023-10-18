@@ -53,7 +53,7 @@ function renderLicenseLink(license) {
         return `(http://creativecommons.org/publicdomain/zero/1.0/)`
         } else if (license === 'Eclipse') {
         return `(https://opensource.org/licenses/EPL-1.0)`
-        }  else if (license === 'GNU AGPL') {
+        } else if (license === 'GNU AGPL') {
         return `(https://www.gnu.org/licenses/agpl-3.0)` 
         } else if (license === 'GNU GPL v2') {
         return `(https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`
@@ -69,15 +69,14 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-    if (license.length === 0) {
-        return ""
-      } else {
-        return `## License
-      ${renderLicenseBadge(license)}
-      ${renderLicenseLink(license)} 
-        `
-      }
-
+  if (license.length === 0) {
+   return ""
+} else {
+return `## License
+${renderLicenseBadge(license)}
+${renderLicenseLink(license)} 
+`
+  }
 };
 
 // TODO: Create a function to generate markdown for README
