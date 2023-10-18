@@ -16,4 +16,4 @@ Inquirer resources: https://www.npmjs.com/package/inquirer/v/8.2.4
 Repo: https://github.com/Quackingtaco/readme-generator
 
 ## Video
-https://drive.google.com/file/d/1xzziT8EuhvtOHphq4dzNoz24JFCVOlUh/view?usp=drive_link
+https://drive.google.com/file/d/1xzziT8EuhvtOHphq4dzNoz24JFCVOlUh/view?usp=share_link
